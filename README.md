@@ -11,7 +11,7 @@ $ docker build -t myjenkins .
 
 Run a container:
 
-$ docker run -d -u root -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):/usr/bin/docker -v jenkins_home:/var/jenkins_home -p 8080:8080 myjenkins
+$ docker run -d -u root -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):/usr/bin/docker -v <DIR_OUTSIDE_CONTAINER>:/var/jenkins_home -p 8080:8080 myjenkins
 
 Note that the volume bindings for 'docker.sock' allow docker commands run inside the Jenkins container to spawn containers in the Jenkin container's host.
 
