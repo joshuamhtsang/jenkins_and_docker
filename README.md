@@ -40,3 +40,10 @@ Once inside, follow the instructions:
 
 https://docs.docker.com/compose/install/
 
+## Setting up SSH keypair in Jenkins container.
+
+This is needed in order for Jenkins to clone code from your Github.  Like above, get a bash shell up in the Jenkins container.  Then, do:
+
+$ ssh-keygen
+
+Once the key is made, add the public key to your Github account 'Settings' -> SSH and GPG keys.
