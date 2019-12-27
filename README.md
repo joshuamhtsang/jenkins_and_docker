@@ -5,7 +5,7 @@ A Jenkins instance which can run docker commands.
 
 ## Running the Jenkins container.
 
-Build the Docker image using the Dockerfile in this repo.
+Build the Docker image using the Dockerfile in this repo (you may need sudo).
 
 $ docker build -t myjenkins .
 
