@@ -23,7 +23,8 @@ If you are using GCP, you need to add a 'Firewall rules' for port 8080.
 
 Common things you need to do are:
 
-1. Add Github credentials (usename and password).
+1. Add Github credentials (username and password).
+   Go to 'Credentials' and add 'Username with password'.
 2. Install Plugins with 'Plugin Manager': 
      'Docker plugin', 'Docker Compose Build Step plugin'
 3. Install docker-compose in Jenkins container (see below).
@@ -44,7 +45,8 @@ https://docs.docker.com/compose/install/
 
 ## Setting up SSH keypair in Jenkins container.
 
-This is needed in order for Jenkins to clone code from your Github.  Like above, get a bash shell up in the Jenkins container.  Then, do:
+This is needed in order for Jenkins to clone code from your Github.  Git a bash shell up in the Jenkins container 
+(docker exec -it <jenkins_container_name> bash).  Then, do:
 
 $ ssh-keygen
 
