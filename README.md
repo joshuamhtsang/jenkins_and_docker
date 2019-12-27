@@ -16,6 +16,8 @@ $ docker run -d -u root -v /var/run/docker.sock:/var/run/docker.sock -v $(which 
 Note that the volume bindings for 'docker.sock' allow docker commands run inside the Jenkins container to spawn containers in the Jenkin container's host.
 
 Once the Jenkins container is running, you can access the Jenkins UI:  < IP address or web domain address >:8080
+If you are using GCP, you need to add a 'Firewall rules' for port 8080.
+
 
 ## Auxiliaries.
 
