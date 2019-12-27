@@ -50,4 +50,8 @@ This is needed in order for Jenkins to clone code from your Github.  Git a bash 
 
 $ ssh-keygen
 
-Once the key is made, add the public key to your Github account 'Settings' -> SSH and GPG keys.
+Once the key is made, add the public key to your Github account 'Settings' -> 'SSH and GPG keys'.  Note, the first time you
+pull a repository it asks:
+  > Are you sure you want to continue connecting (yes/no)? yes
+It requires an interactive response of 'yes'.  It is recommended you go to /home/ (still inside docker container) and do a 'git clone'
+for the first time and enter 'yes' manually.  After this, you can Jenkins project builders can 'got clone' without issue.
